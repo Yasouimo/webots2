@@ -1,0 +1,276 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/samples/contests/rockin/protos/RoCKInShelf.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/animals/protos/Cat.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Wrench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Screwdriver.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Hammer.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.19440927275219913 0.20076392444198907 -0.9601556547303216 1.5792779584211012
+  position -0.09656799330986132 5.558964550054941 1.6979709807546681
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 5 2.5
+  floorAppearance Parquetry {
+  }
+}
+Hammer {
+  translation 0.65 0 0.014
+}
+Screwdriver {
+  translation -0.1 0.39 0.012
+}
+Wrench {
+  translation -0.85 0.09 0
+}
+Cat {
+  translation 1.65 0 0
+  rotation 1 0 0 4.692820414042842e-06
+}
+E-puck {
+  hidden position_0_0 960.9172479607472
+  hidden position_0_1 1039.8172139065498
+  hidden translation_1 0 0.025999999999999985 0.02
+  hidden rotation_1 0 1 0 5.87308126945006
+  hidden translation_2 0 -0.02600000000000002 0.02
+  hidden rotation_2 0 -1 0 3.1915470852615595
+  translation 0.444683 0.797543 0.000501754
+  rotation 0.000487679909819609 0.00048224389893149536 -0.9999997648045361 1.5820057234599965
+  controller "ep_controller"
+  supervisor TRUE
+  camera_fieldOfView 1.5
+  camera_width 640
+  camera_height 480
+  camera_antiAliasing TRUE
+}
+RoCKInShelf {
+  translation 0.47 -1.08 0
+  rotation 0 0 1 1.5708
+}
+DEF Box_1 Solid {
+  translation 0.278911 -0.989085 0.0805833
+  rotation 1.9563034022572854e-12 2.47575009065507e-12 -1 0.00044019
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(1)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.453849 -0.989085 0.0805833
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(2)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.643849 -0.989161 0.0805833
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(3)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.643787 -1.13915 0.080583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(10)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.643787 -1.13915 0.240583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(11)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.643845 -0.999161 0.240583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(4)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.653845 -0.999165 0.410583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(9)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.263841 -1.00901 0.240583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(5)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.263783 -1.14901 0.240583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(8)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation -0.505844 -0.228684 0.050583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(7)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation 0.443849 -0.989079 0.410583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(6)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+Solid {
+  children [
+    Transform {
+    }
+  ]
+}
