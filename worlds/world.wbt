@@ -12,12 +12,15 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Hammer.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/geometries/protos/Rectangle.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/OsbWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/Can.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/animals/protos/Rabbit.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.15847857525232656 0.0005310151300682153 -0.9873622735394159 3.1349587683871087
-  position 2.1554474931083076 -0.3235029168160868 1.842716868634273
+  orientation -0.2095246914606465 -0.26673784918530985 0.940717982968496 4.891745958025254
+  position 1.2964475598072902 5.446471503142274 2.8811906609916176
 }
 TexturedBackground {
 }
@@ -25,14 +28,166 @@ TexturedBackgroundLight {
 }
 RectangleArena {
   floorSize 5 2.5
+  floorTileSize 0.3 0.3
   floorAppearance Parquetry {
   }
 }
+E-puck {
+  translation 1.71 0.06 0
+  name "e-puck(2)"
+}
+E-puck {
+  translation 2.18 -0.87 0
+  name "e-puck(1)"
+}
+Rabbit {
+  translation -0.45 -0.98 0
+}
+Can {
+  hidden linearVelocity_0 1.479953962127469e-12 2.972593488765331e-17 8.06366565552432e-17
+  hidden angularVelocity_0 -7.757664995158222e-16 1.2678630203878612e-12 4.8921722664350516e-17
+  translation 0.2900000036320602 0.9100000000000037 0.08103139918814899
+  rotation -7.189772988181558e-05 0.9999999973668194 9.852801856753614e-06 2.8651508137302147e-11
+}
+Can {
+  hidden linearVelocity_0 1.4800592654877461e-12 -1.2935274265698817e-17 1.7080603183051688e-16
+  hidden angularVelocity_0 3.290794820344649e-16 1.2695749455682125e-12 2.7205347913270745e-16
+  translation 0.41000000363204736 0.9100000000000036 0.08103135997276138
+  rotation -5.7816427496013046e-05 0.9999999982983931 7.776536187221152e-06 2.865191709906548e-11
+  name "can(1)"
+}
+Can {
+  hidden linearVelocity_0 1.4799043785828095e-12 -4.002849123086892e-18 1.55720478882099e-16
+  hidden angularVelocity_0 1.8803797913741498e-16 1.2671314442473925e-12 -3.101282758521546e-18
+  translation 0.520000003632035 0.9100000000000036 0.08103132402532275
+  rotation -7.236233818623929e-05 0.9999999973318129 1.0003310307494444e-05 2.8652580495324015e-11
+  name "can(2)"
+}
+Can {
+  hidden linearVelocity_0 1.4799826902483537e-12 2.808780230792794e-17 6.91723653045134e-16
+  hidden angularVelocity_0 -6.301866508537718e-16 1.2689920803578435e-12 6.262182468512194e-16
+  translation 0.5200000036320354 0.9100000000000035 0.25103132402532263
+  rotation -0.0001169912526603133 0.9999999929737851 1.911743281541522e-05 2.8654481077771845e-11
+  name "can(5)"
+}
+Can {
+  translation 0.3 0.91 0.251031
+  rotation -0.0001169912526603133 0.9999999929737851 1.911743281541522e-05 2.8654481077771845e-11
+  name "can(6)"
+}
+Can {
+  translation 0.3 0.91 0.421031
+  rotation -0.0001169912526603133 0.9999999929737851 1.911743281541522e-05 2.8654481077771845e-11
+  name "can(7)"
+}
+Can {
+  translation 0.51 0.91 0.421031
+  rotation -0.0001169912526603133 0.9999999929737851 1.911743281541522e-05 2.8654481077771845e-11
+  name "can(8)"
+}
+Can {
+  hidden linearVelocity_0 1.4799015423589983e-12 9.235302490004558e-17 1.175426484276492e-16
+  hidden angularVelocity_0 -1.225225173938116e-15 1.2669448485142382e-12 -1.8752824813838434e-16
+  translation 0.6400000036320223 0.9100000000000035 0.08103128480993514
+  rotation -6.616574421086492e-05 0.9999999977271753 1.2951598400725813e-05 2.8651857127809904e-11
+  name "can(3)"
+}
+Can {
+  hidden linearVelocity_0 1.4800271559376427e-12 3.4671515328913443e-17 7.356717727833577e-16
+  hidden angularVelocity_0 -3.8000453398525354e-16 1.2688803615549473e-12 -1.815099767417614e-16
+  translation 0.6400000036320229 0.9100000000000036 0.25103128480993503
+  rotation -8.292632391572797e-05 0.9999999964392985 1.5640575824581118e-05 2.865465908755541e-11
+  name "can(4)"
+}
+Can {
+  translation 1.14 0.91 0.061031
+  rotation -8.292632391572797e-05 0.9999999964392985 1.5640575824581118e-05 2.865465908755541e-11
+  name "can(9)"
+}
+Can {
+  translation 1.28 0.91 0.061031
+  rotation -8.292632391572797e-05 0.9999999964392985 1.5640575824581118e-05 2.865465908755541e-11
+  name "can(10)"
+}
+RoCKInShelf {
+  translation 0.469999 1.01 0
+  rotation 0 0 1 -1.5707953071795862
+  name "RoCKIn shelf(1)"
+}
+Wall {
+  translation 0.89 -0.88 0
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation 0.11 -0.88 0
+  name "wall(6)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation -0.03 0.88 0
+  name "wall(7)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation 1.02 0.9 0
+  name "wall(4)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation -0.84 0.9 0
+  name "wall(5)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation -0.84 -0.9 0
+  name "wall(8)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation 1.47 -0.88 0
+  name "wall(3)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation 1.72 0.86 0
+  name "wall(1)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation -1.51 0.86 0
+  name "wall(2)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
+Wall {
+  translation -1.51 -0.88 0
+  name "wall(9)"
+  size 0.05 0.7 0.3
+  appearance Parquetry {
+  }
+}
 Solid {
-  translation -2.31 -0.79 0
+  translation -2.31 -0.84 0
   rotation 0 0 1 -1.5707953071795862
   children [
-    Transform {
+    Pose {
       translation 0.35 0 0.1
       children [
         Shape {
@@ -44,7 +199,7 @@ Solid {
         }
       ]
     }
-    Transform {
+    Pose {
       translation -0.15 0.00847054 0.1
       children [
         Shape {
@@ -56,7 +211,7 @@ Solid {
         }
       ]
     }
-    Transform {
+    Pose {
       translation 0.1 0.00847054 0.206252
       rotation -0.5773506025225371 0.5773496025232256 0.5773506025225371 2.0944
       children [
@@ -73,24 +228,39 @@ Solid {
   name "solid(1)"
 }
 Hammer {
-  translation 0.89994 0.000128335 0.0136559
-  rotation -0.8938596800324738 -0.4483425457744307 0.0019580757763418646 0.010379061623636
+  translation 2.0099404334729685 0.9000095168375425 0.012493610337392047
+  rotation -0.8938636926475587 -0.4482782606359482 -0.0073688538918418815 0.010380586277002793
+}
+Hammer {
+  translation -1.0300987988926629 0.9198409288007471 0.012493610238274628
+  rotation -0.002312445883859136 -0.006966090283852447 0.9999730627272874 1.5708157102079574
+  name "hammer(1)"
+}
+Hammer {
+  translation -2.36214 -0.931153 0.21151
+  rotation -0.002312445883859136 -0.006966090283852447 0.9999730627272874 1.5708157102079572
+  name "hammer(2)"
 }
 Screwdriver {
-  translation -0.10005039434709295 0.39 0.011849211728077683
-  rotation 0 1 0 0.0020535897630480113
+  translation -2.24966 -0.920149 0.21155
+  rotation 0.000528028840813489 -0.0015245095404013266 0.9999986985272554 -1.5707953071795862
 }
 Wrench {
-  translation -0.8499997220856009 0.08999994359080872 -0.0010954427936572136
-  rotation -0.19260882480371946 -0.9812756151564775 -8.778955975336517e-05 0.00029536557073317525
+  translation 1.19 -0.999999 -0.00135957
+  rotation -0.19235258562465488 -0.9801322388349692 0.048386746117719814 0.00029583277638489154
+}
+Wrench {
+  translation 1.53 0.87999 -0.0013681
+  rotation -0.19235258562465488 -0.9801322388349692 0.048386746117719814 0.00029583277638489154
+  name "wrench(1)"
 }
 Cat {
-  translation 1.65 0 0
+  translation -1.93 0.96 4.5052e-06
   rotation 1 0 0 4.692820414042842e-06
 }
 E-puck {
-  translation 0.445972 0.913055 -0.000366789
-  rotation -0.00022266728968325757 -0.00022018535134737602 -0.9999999509688434 1.5820055601672975
+  translation 1.74796 -0.716653 0.000110602
+  rotation -0.00012122853967529039 0.00012259209602181618 0.9999999851374094 1.5595898468604814
   controller "ep_controller"
   supervisor TRUE
   camera_fieldOfView 1.5
@@ -274,7 +444,7 @@ DEF Box_1 Solid {
   ]
 }
 DEF Box_1 Solid {
-  translation -0.505844 -0.228684 0.050583
+  translation -1.23539 0.941634 0.050583
   rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
   children [
     DEF BOX Shape {
@@ -286,6 +456,25 @@ DEF Box_1 Solid {
     }
   ]
   name "Box 2(7)"
+  model "Box 1"
+  boundingObject USE BOX
+  recognitionColors [
+    0.1 0 0
+  ]
+}
+DEF Box_1 Solid {
+  translation -1.3954 0.941696 0.050583
+  rotation 1.5763450275890617e-13 1.9949974256978228e-13 -1 0.00044019019672185373
+  children [
+    DEF BOX Shape {
+      appearance Parquetry {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "Box 2(12)"
   model "Box 1"
   boundingObject USE BOX
   recognitionColors [
