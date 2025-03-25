@@ -10,12 +10,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Wrench.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Screwdriver.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Hammer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/geometries/protos/Rectangle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/OsbWood.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.19440927275219913 0.20076392444198907 -0.9601556547303216 1.5792779584211012
-  position -0.09656799330986132 5.558964550054941 1.6979709807546681
+  orientation 0.15847857525232656 0.0005310151300682153 -0.9873622735394159 3.1349587683871087
+  position 2.1554474931083076 -0.3235029168160868 1.842716868634273
 }
 TexturedBackground {
 }
@@ -26,28 +28,69 @@ RectangleArena {
   floorAppearance Parquetry {
   }
 }
+Solid {
+  translation -2.31 -0.79 0
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Transform {
+      translation 0.35 0 0.1
+      children [
+        Shape {
+          appearance OsbWood {
+          }
+          geometry Rectangle {
+            size 0.3 0.21
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -0.15 0.00847054 0.1
+      children [
+        Shape {
+          appearance OsbWood {
+          }
+          geometry Rectangle {
+            size 0.3 0.21
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0.1 0.00847054 0.206252
+      rotation -0.5773506025225371 0.5773496025232256 0.5773506025225371 2.0944
+      children [
+        Shape {
+          appearance OsbWood {
+          }
+          geometry Rectangle {
+            size 0.5 0.3
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
+}
 Hammer {
-  translation 0.65 0 0.014
+  translation 0.89994 0.000128335 0.0136559
+  rotation -0.8938596800324738 -0.4483425457744307 0.0019580757763418646 0.010379061623636
 }
 Screwdriver {
-  translation -0.1 0.39 0.012
+  translation -0.10005039434709295 0.39 0.011849211728077683
+  rotation 0 1 0 0.0020535897630480113
 }
 Wrench {
-  translation -0.85 0.09 0
+  translation -0.8499997220856009 0.08999994359080872 -0.0010954427936572136
+  rotation -0.19260882480371946 -0.9812756151564775 -8.778955975336517e-05 0.00029536557073317525
 }
 Cat {
   translation 1.65 0 0
   rotation 1 0 0 4.692820414042842e-06
 }
 E-puck {
-  hidden position_0_0 960.9172479607472
-  hidden position_0_1 1039.8172139065498
-  hidden translation_1 0 0.025999999999999985 0.02
-  hidden rotation_1 0 1 0 5.87308126945006
-  hidden translation_2 0 -0.02600000000000002 0.02
-  hidden rotation_2 0 -1 0 3.1915470852615595
-  translation 0.444683 0.797543 0.000501754
-  rotation 0.000487679909819609 0.00048224389893149536 -0.9999997648045361 1.5820057234599965
+  translation 0.445972 0.913055 -0.000366789
+  rotation -0.00022266728968325757 -0.00022018535134737602 -0.9999999509688434 1.5820055601672975
   controller "ep_controller"
   supervisor TRUE
   camera_fieldOfView 1.5
@@ -270,7 +313,7 @@ DEF Box_1 Solid {
 }
 Solid {
   children [
-    Transform {
+    Pose {
     }
   ]
 }

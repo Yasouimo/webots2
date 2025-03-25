@@ -7,4 +7,4 @@ centralWidgetVisible: 1
 orthographicViewHeight: 1
 textFiles: 0 "controllers/ep_controller/ep_controller.py"
 consoles: Console:All:All
-renderingDevicePerspectives: e-puck:camera;1;0.435417;0;0
+renderingDevicePerspectives: e-puck:camera;1;0.29375;0;0
