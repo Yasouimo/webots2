@@ -1,32 +1,59 @@
-from controller import Robot, Camera, Motor
-
-TIME_STEP = 50  # Ensure it matches Webots' world step
+from controller import Robot
 
 # Initialize the robot
 robot = Robot()
 
-# Initialize Motors
-left_motor = robot.getDevice("left wheel motor")
-right_motor = robot.getDevice("right wheel motor")
+# Time step for the simulation
+timeStep = int(robot.getBasicTimeStep())
 
-left_motor.setPosition(float('inf'))  # Set to velocity control
-right_motor.setPosition(float('inf'))
+# Constants for the e-puck motors and distance sensors
+maxMotorVelocity = 4.2
+num_left_dist_sensors = 4
+num_right_dist_sensors = 4
+left_threshold = 75  # Threshold for the left sensors
+right_threshold = 75  # Threshold for the right sensors
 
-left_motor.setVelocity(0.0)  # Initial speed
-right_motor.setVelocity(0.0)
+# Get motors
+leftMotor = robot.getMotor("left wheel motor")
+rightMotor = robot.getMotor("right wheel motor")
 
-# Initialize Camera
-camera = robot.getDevice("camera")
-camera.enable(TIME_STEP)  # Enable camera
+# Get distance sensors for the left and right side
+dist_left_sensors = [robot.getDistanceSensor('ps' + str(x)) for x in range(num_left_dist_sensors)]
+dist_right_sensors = [robot.getDistanceSensor('ps' + str(x + num_left_dist_sensors)) for x in range(num_right_dist_sensors)]
 
-# Main Control Loop
-while robot.step(TIME_STEP) != -1:
-    # Capture Camera Image
-    image = camera.getImage()
-    if image:
-        print("Camera capturing frames.")
+# Enable the distance sensors
+for sensor in dist_left_sensors + dist_right_sensors:
+    sensor.enable(timeStep)
 
-    # Move the robot forward
-    left_motor.setVelocity(3.0)
-    right_motor.setVelocity(3.0)  # Adjust speed if needed
+# Set the motor position to infinity for velocity control
+leftMotor.setPosition(float('inf'))
+rightMotor.setPosition(float('inf'))
 
+# Set the initial velocity of the motors
+initialVelocity = 0.7 * maxMotorVelocity
+leftMotor.setVelocity(initialVelocity)
+rightMotor.setVelocity(initialVelocity)
+
+while robot.step(timeStep) != -1:
+    # Read sensor values
+    left_dist_sensor_values = [sensor.getValue() for sensor in dist_left_sensors]
+    right_dist_sensor_values = [sensor.getValue() for sensor in dist_right_sensors]
+    
+    # Check if there are obstacles in the left or right sensors
+    left_obstacle = any(x > left_threshold for x in left_dist_sensor_values)
+    right_obstacle = any(x > right_threshold for x in right_dist_sensor_values)
+    
+    # If there's an obstacle on the left, turn to the right
+    if left_obstacle:
+        leftMotor.setVelocity(initialVelocity - (0.5 * initialVelocity))  # Slow down left motor
+        rightMotor.setVelocity(initialVelocity + (0.5 * initialVelocity))  # Speed up right motor
+    
+    # If there's an obstacle on the right, turn to the left
+    elif right_obstacle:
+        leftMotor.setVelocity(initialVelocity + (0.5 * initialVelocity))  # Speed up left motor
+        rightMotor.setVelocity(initialVelocity - (0.5 * initialVelocity))  # Slow down right motor
+    
+    # If there are no obstacles, continue forward
+    else:
+        leftMotor.setVelocity(initialVelocity)
+        rightMotor.setVelocity(initialVelocity)
