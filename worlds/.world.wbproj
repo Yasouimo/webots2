@@ -7,6 +7,6 @@ centralWidgetVisible: 1
 orthographicViewHeight: 1
 textFiles: 0 "controllers/ep_controller/ep_controller.py" "C:/Program Files/Webots/projects/robots/gctronic/e-puck/controllers/e-puck_avoid_obstacles/e-puck_avoid_obstacles.c"
 consoles: Console:All:All
-renderingDevicePerspectives: e-puck(1):camera;1;1;0;0
-renderingDevicePerspectives: e-puck(2):camera;1;1;0.203373;0.903316
-renderingDevicePerspectives: e-puck:camera;1;0.179167;0.325397;0.359117
+renderingDevicePerspectives: e-puck(1):camera;1;0.320833;0;0.0110497
+renderingDevicePerspectives: e-puck(2):camera;1;1.63462;0.0575396;0.714089
+renderingDevicePerspectives: e-puck:camera;1;0.179167;0.0386908;0.367404
